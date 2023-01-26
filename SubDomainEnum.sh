@@ -4,6 +4,7 @@ echo -e "\033[32m"
 if [ $# -lt 1 ]; then
     echo "Usage: $0 option [arguments]"
     echo "Options: setup, enumerate"
+    echo ""
     echo "	   setup - Setup the environment (To include go, rust, and tools such as amasss, subfinder, assetfinder, puredns, and ripgen)"
     echo "	   enumerate - Perform subdomain enumeration" 
     exit 1
@@ -288,10 +289,11 @@ elif [ "$option" == "enumerate" ]; then
     if [ $# -lt 3 ]; then
      	echo -e "\033[32m"
      	echo "Usage: $0 enumerate root_domain_list wordlist outputdirectory amass_config"
-     	echo "		root_domain 	(Required)	- file containing root domain names to be enumerated for subdomains"
+        echo ""
+     	echo "		root_domains 	(Required)	- file containing root domain names to be enumerated for subdomains"
       	echo "		wordlist 	(Required)	- wordlist used for subdomain bruteforcing"
-	echo "		outputdirectory	(Required) 	- directory name that will be created for all output files to be stored."
-	echo "		amass_config 	(Optional)	- amass configuration file with API keys"
+	   echo "		outputdirectory	(Required) 	- directory name that will be created for all output files to be stored."
+	   echo "		amass_config 	(Optional)	- amass configuration file with API keys"
       exit 1
     fi
 
@@ -483,6 +485,7 @@ else
     echo -e "\033[32m"
     echo "Usage: $0 option [arguments]"
     echo "Options: setup, enumerate"
+    echo ""
     echo "	   setup - Setup the environment (To include go, rust, and tools such as amasss, subfinder, assetfinder, puredns, and ripgen)"
     echo "	   enumerate - Perform subdomain enumeration" 
     echo -e "\033[31mError: Invalid option provided...\033[32m" >&2 
