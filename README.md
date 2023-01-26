@@ -18,6 +18,6 @@ Simply run SubDomainEnum.sh with the setup parameter.
 ./SubDomainEnum.sh setup
 ```
 
-Setup will install all tools listed above (If they are not already installed) and also setup your GO$ environment variables (If they are not already setup). If your GO$ environment variables are not already setup you will need to run the setup portion of this script twice. The first time the script will provide a list of commands for you to copy and paste into the terminal to configure your environment variables. The second time the script will download the necessary tools. 
+The setup process will install all necessary tools and configure your GO$ environment variables. If any of the tools or environment variables are not already installed or configured, the script will guide you through the process. The initial run will provide a list of commands for configuring your environment variables, and a subsequent run will download the necessary tools.
 
 ## Enumeration
