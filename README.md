@@ -34,5 +34,5 @@ All scan results will be saved to the specified output directory. The final list
 
 **Example Command:**
 ```
-./SubDomainEnum.sh enumerate rootDomains.txt best-dns-wordlist.txt	output_1 custom_config.ini
+./SubDomainEnum.sh enumerate rootDomains.txt best-dns-wordlist.txt output_1 custom_config.ini
 ```
