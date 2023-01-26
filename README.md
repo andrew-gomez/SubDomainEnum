@@ -30,9 +30,9 @@ Enumeration accepts four positional commands, three of which are required.
  - ***outputdirectory (Required)***  - The name of the output directory that will be created and where all output files will be stored. `
  - ***amass_config***  - An amass config file with API keys (I strongly suggest providing a config for better results). 
 
-All scan results will be saved to the specified output directory. The final likst of subdomains will be saved in a file called final_subbdomains.txt
+All scan results will be saved to the specified output directory. The final list of subdomains will be saved in a file called final_subbdomains.txt
 
-Example Command:
+**Example Command:**
 ```
 ./SubDomainEnum.sh enumerate rootDomains.txt best-dns-wordlist.txt	output_1 custom_config.ini
 ```
