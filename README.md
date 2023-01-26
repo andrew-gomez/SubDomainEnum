@@ -25,11 +25,12 @@ The setup process will install all necessary tools and configure your GO$ enviro
 
 Enumeration accepts four positional commands, three of which are required. 
  
- - ***root_domains*** - This should be a file that contains a list of root domains (E.G. google.com, amazon.com, etc...). Each root domain should be on a new line. 
- -  ***wordlist***     - This should be a subdomain wordlist. This file will be used to conduct subdomain bruteforcing.
- - ***outputdirectory***  - The name of the output directory that will be created and where all output files will be stored. `
+ - ***root_domains (Required)*** - This should be a file that contains a list of root domains (E.G. google.com, amazon.com, etc...). Each root domain should be on a new line. 
+ -  ***wordlist (Required)***     - This should be a subdomain wordlist. This file will be used to conduct subdomain bruteforcing.
+ - ***outputdirectory (Required)***  - The name of the output directory that will be created and where all output files will be stored. `
  - ***amass_config***  - An amass config file with API keys (I strongly suggest providing a config for better results). 
 
+All scan results will be saved to the specified output directory. The final likst of subdomains will be saved in a file called final_subbdomains.txt
 
 Example Command:
 ```
