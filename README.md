@@ -23,7 +23,7 @@ The setup process will install all necessary tools and configure your GO$ enviro
 ## Enumeration
 ![alt text](https://github.com/antroguy/SubDomainEnum/blob/main/images/Enumerate.png)
 
-Enumeration accepts four positional commands, three of which are required. 
+Enumeration accepts four positional arguments, three of which are required. 
  
  - ***root_domains (Required)*** - This should be a file that contains a list of root domains (E.G. google.com, amazon.com, etc...). Each root domain should be on a new line. 
  -  ***wordlist (Required)***     - This should be a subdomain wordlist. This file will be used to conduct subdomain bruteforcing.
