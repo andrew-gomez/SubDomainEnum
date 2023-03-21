@@ -82,12 +82,18 @@ if [ "$option" == "setup" ]; then
             exit 1
         fi
     fi
-
+    
+    #attempt to add GOPATH
+    export GOPATH=$HOME/go
+    export GOROOT=/usr/lib/go
+    export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+    source ~/.bashrc
+    
     # Check if GOPATH is set
     if [ -z "$GOPATH" ]; then
         echo -e "\033[32m"
         echo " "
-        echo 'You need to setup your go environment. perform the following and then re-run the setup:'
+        echo 'An attempt to add GOPATH was made during setup but may have failed. You may need to setup your go environment. Perform the following and then re-run the setup if the GOPATH is not set:'
         echo "-------------------------------------------------------------------------------------------"
         echo "echo \"export GOROOT=/usr/lib/go\" >> ~/${RC}"
         echo "echo \"export GOPATH=\$HOME/go\" >> ~/${RC}"
@@ -260,7 +266,11 @@ if [ "$option" == "setup" ]; then
     if ! [ -x "$(command -v cargo)" ]; then
         sudo apt -y install cargo
     fi
-
+    
+    #attempt to add path for user
+    export PATH="/home/vnc/.cargo/bin:$PATH"
+    source $HOME/.cargo/env
+    
     # Check if ripgen is installed. If not, check if rust/cargo are installed and then install it.
     if ! [ -x "$(command -v ripgen)" ]; then
         # ripgen is not installed, check if rustc and cargo are in the PATH
@@ -268,7 +278,7 @@ if [ "$option" == "setup" ]; then
             cargo install ripgen
             echo -e "\033[32m"
             echo " "
-            echo "Perform the following before running enumeration"
+            echo "An attempt to install cargo and add it to your PATH must have failed during setup, please perform the following before running enumeration"
             echo "-------------------------------------------------------------------------------------------"
             echo "echo \"export PATH=\$HOME/.cargo/bin:\$PATH\" >> ~/${RC}"
             echo "source ~/${RC}"
